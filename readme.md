@@ -39,6 +39,5 @@ Since Axe API already analyzes all of your models, routes, validations, etc, it 
 You can see the following link a full-working example of the documentation that has been created by Axe API automatically.
 
 ```
-
 http://localhost:3000/docs
 ```
