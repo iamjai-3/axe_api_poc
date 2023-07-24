@@ -9,7 +9,9 @@
     "build:unix": "rm -rf build && tsc",
     "build:win": "rmdir /s /q build && tsc",
     "postbuild": "sh scripts/postbuild.sh",
-    "migrate:up": "knex --esm migrate:up",
+    "migrations": "knex migrate:latest",
+    "generate:seeder": "ts-node generateSeed.ts",
+    "seed": "knex seed:run",
     "test": "jest",
     "test:dev": "jest --watch"
   },
