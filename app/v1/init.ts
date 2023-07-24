@@ -1,5 +1,6 @@
 import { Express, Request, Response } from 'express';
 import ErrorHandler from './Handlers/ErrorHandler';
+import Login from './Handlers/Login';
 
 const onBeforeInit = async (app: Express) => {
   app.get('/', (req: Request, res: Response) => {
@@ -7,6 +8,8 @@ const onBeforeInit = async (app: Express) => {
       response: 'Health Check!!'
     });
   });
+
+  app.post('/api/v1/login', Login);
 };
 
 const onAfterInit = async (app: Express) => {

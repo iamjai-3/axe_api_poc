@@ -1,6 +1,10 @@
 import { Model } from 'axe-api';
+import isLogged from '../Middlewares/isLogged';
 
 class Book extends Model {
+  get middlewares() {
+    return [isLogged];
+  }
   get fillable() {
     return ['name', 'author', 'price'];
   }
